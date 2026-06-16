@@ -1,6 +1,25 @@
-// List
+// VARIABLES
 const games = [
-    
+    {
+        cover: "img/img1",
+        title: "sample1"
+    },
+    {
+        cover: "img/img2",
+        title: "sample2"
+    },
+    {
+        cover: "img/img3",
+        title: "sample3"
+    },
+    {
+        cover: "img/img4",
+        title: "sample4"
+    },
+    {
+        cover: "img/img5",
+        title: "sample5"
+    }
 ]
 const gameCover = document.getElementById("game-cover")
 const gameTitle = document.getElementById("game-title")

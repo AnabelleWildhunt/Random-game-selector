@@ -3,47 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Zen+Dots&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="animus.css">
     <title>Random game selector</title>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav id="navbar">   <!-- future 'add game' functionality -->
 
-    </nav>
+    <div class="locus">
+        <div class="locus-inner-frame">
+            
+            <!-- NAVBAR -->
+            <nav class="navbar">   <!-- future 'add game' functionality -->
 
-    <!-- MAIN CONTAINER -->
-    <main id="main">
+            </nav>
 
-        <header>
-            <h1></h1> <!-- app's name -->
-        </header>
+            <!-- HEADER -->
+            <header>
+                <h1>Random Game Selector</h1> <!-- app's name -->
+                <p>After applying your games folder, click the button and shuffle! ٩(≧ᗜ≦ )و</p>
+            </header>
 
-        <section>
-            <div class="frame"> <!-- display -->
-                <div id="game-cover"></div>
-            </div>
+            <!-- MAIN CONTAINER -->
+            <main class="main">
 
-            <div class="frame"> <!-- title -->
-                <div id="game-title"></div>
-            </div>
+                <section>
+                    <div class="frame flex display">
+                        <div id="game-cover"></div> <!-- DISPLAY -->
+                    </div>
 
-            <!-- 'play' button -->
-            <!-- <div class="frame"> 
-                <button class"btn""></button>
-            </div> -->
+                    <div class="frame flex title"> 
+                        <div class="flex" id="game-title"></div> <!-- TITLE -->
+                    </div>
 
-            <div class="frame"> <!-- 'shuffle' button -->
-                <button id="shuffle" class="btn"></button>
-            </div>
-        </section>
+                    <div class="btn-container">
+                        <div class="frame flex btn-frame" id="play-container"> <!-- 'PLAY' BUTTON' -->
+                            <button class="btn">PLAY!</button>
+                        </div>
 
-    </main>   
+                        <div class="frame flex btn-frame"> <!-- 'SHUFFLE' BUTTON -->
+                            <button id="shuffle" class="btn">SHUFFLE!</button>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
 
     <!-- FOOTER -->
-    <footer id="footer">
-        <p></p> <!-- signature -->
+    <footer class="footer">
+        <p class="small">App made by <a href="#">Anabelle of the Wildhunt</a></p> <!-- signature -->
+        <p class="small">Background picture used from olenkasergienko's Unsplash repository</p>
     </footer>
+
 <script src="mens.js"></script>
 </body>
 </html>

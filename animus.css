@@ -11,24 +11,27 @@
 
     /* BOX PROPERTIES */
     --locus-width: 490px;
-    --locus-heigth: 730px;
+    --locus-height: 730px;
     --locus-innframe-width: calc(var(--locus-width) - 3px);
-    --locus-innframe-heigth: calc(var(--locus-heigth) - 3px);
+    --locus-innframe-height: calc(var(--locus-height) - 3px);
 
     --disp-frame-width: 310px;
-    --disp-frame-heigth: 410px;
+    --disp-frame-height: 410px;
     --disp--width: calc(var(--disp-frame-width) - 10px);
-    --disp--heigth: calc(var(--disp-frame-heigth) - 10px);
+    --disp--height: calc(var(--disp-frame-height) - 10px);
 
     --titl-frame-width: 460px;
-    --titl-frame-heigth: 60px;
+    --titl-frame-height: 60px;
     --titl-width: calc(var(--titl-frame-width) - 10px);
-    --titl-heigth: calc(var(--titl-frame-heigth) - 10px);
+    --titl-height: calc(var(--titl-frame-height) - 10px);
 
     --btn-frame-width: calc(var(--btn-width) + 15px);
-    --btn-frame-heigth: calc(var(--btn-heigth) + 15px);
+    --btn-frame-height: calc(var(--btn-height) + 15px);
     --btn-width: 100px;
-    --btn-heigth: 50px;
+    --btn-height: 50px;
+
+    --form-btn-height: calc(var(--btn-height) / 2);
+    --form-btn-frame-height: calc(var(--form-btn-height) + 15px);
 
     /* MISCELLANEOUS */
     --outer-shadow: 0 0 5px var(--white-tint);
@@ -46,8 +49,11 @@ body{
 }
 
 h1{
-    
     margin: 0;
+}
+
+h2{
+    margin-bottom: 100px;
 }
 
 p{
@@ -67,7 +73,7 @@ a{
 .btn{
     text-align: center;
     width: var(--btn-width);
-    height: var(--btn-heigth);
+    height: var(--btn-height);
     border: 0;
     border-radius: 10px;
     color: var(--white);
@@ -78,13 +84,13 @@ a{
 
 .btn:hover{
     width: calc(var(--btn-width) + 5px);
-    height: calc(var(--btn-heigth) + 5px);
+    height: calc(var(--btn-height) + 5px);
     background-color: var(--main-tint);
 }
 
 .btn:active{
     width: calc(var(--btn-width) - 5px);
-    height: calc(var(--btn-heigth) - 5px);
+    height: calc(var(--btn-height) - 5px);
     background-color: var(--main-shade);
 }
 
@@ -106,10 +112,34 @@ a{
     transform: scale(95%);
 }
 
+form .btn{
+    height: var(--form-btn-height);
+}
+
+form .btn:hover{
+    width: calc(var(--btn-width) + 5px);
+    height: calc(var(--form-btn-height) + 2px);
+    background-color: var(--main-tint);
+}
+
+form .btn:active{
+    width: calc(var(--btn-width) - 5px);
+    height: calc(var(--form-btn-height) - 2px);
+    background-color: var(--main-shade);
+}
+
+form .btn-frame{
+    height: var(--form-btn-frame-height);
+}
+
 .flex{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.grid{
+    display: grid;
 }
 
 /* ----------------- LAYOUT ----------------- */
@@ -118,7 +148,7 @@ a{
     background-image: url(img/bg.jpg);
     background-size: cover;
     width: var(--locus-width);
-    height: var(--locus-heigth);
+    height: var(--locus-height);
     padding: 20px 10px;
     margin: 0 auto;
     border: 4px solid var(--white);
@@ -130,7 +160,7 @@ a{
     display: inline-block;
     margin: 0;
     width: var(--locus-innframe-width);
-    height: var(--locus-innframe-heigth);
+    height: var(--locus-innframe-height);
     border: 2px solid var(--white);
 }
 
@@ -159,7 +189,7 @@ header{
 
 .display{
     width: var(--disp-frame-width);
-    height: var(--disp-frame-heigth);
+    height: var(--disp-frame-height);
     margin: 10px auto 0;
 }
 
@@ -167,12 +197,12 @@ header{
     border-radius: 10px;
     background-color: var(--black);
     width: var(--disp--width);
-    height: var(--disp--heigth);
+    height: var(--disp--height);
 }
 
 .title{
     width: var(--titl-frame-width);
-    height: var(--titl-frame-heigth);
+    height: var(--titl-frame-height);
     margin: 20px auto 0;
 }
 
@@ -181,7 +211,7 @@ header{
     color: var(--main);
     background-color: var(--black);
     width: var(--titl-width);
-    height: var(--titl-heigth);
+    height: var(--titl-height);
     font-family: "Bitcount Single", system-ui;
     font-size: 1.1rem;
 }
@@ -197,11 +227,16 @@ header{
 
 .btn-frame{
     width: var(--btn-frame-width);
-    height: var(--btn-frame-heigth);
+    height: var(--btn-frame-height);
     margin: 20px auto 0;
 }
 
 .footer{
     margin-top: 50px;
     text-align: center;
+}
+
+form{
+    margin: auto;
+    width: 50%;
 }

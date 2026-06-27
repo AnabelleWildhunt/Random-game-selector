@@ -142,6 +142,10 @@ form .btn-frame{
     display: grid;
 }
 
+.grid-gap{
+    row-gap: 10px;
+}
+
 /* ----------------- LAYOUT ----------------- */
 
 .locus{
